@@ -14,27 +14,33 @@
 </head>
 <body>
     <header>
+        <figure>
+            <img src="./img/logo.png" alt="logo">
+            <figcaption>
+                <h1><span>east asian</span>dumplings</h1>
+            </figcaption>
+        </figure>
         <nav>
             <!-- Bootstrap Dropdowns for Mobile navigation bar -->
             <details class="nav-item dropdown">
                 <summary>
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
+                        <i class="fa-solid fa-bars"></i>
                     </a>
                 </summary>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">home</a></li>
-                    <li><a class="dropdown-item" href="eden.html">east asian</a></li>
-                    <li><a class="dropdown-item" href="yusuke.html">european</a></li>
-                    <li><a class="dropdown-item" href="jade.html">middle eastern</a></li>
+                    <li><a class="dropdown-item" href="eden.html">korea</a></li>
+                    <li><a class="dropdown-item" href="yusuke.html">japan</a></li>
+                    <li><a class="dropdown-item" href="jade.html">china</a></li>
                 </ul>
             </details>
             <!-- Bootstrap Dropdowns END -->
             <ul>
                 <li><a href="#">home</a></li>
-                <li><a href="eden.html">east asian</a></li>
-                <li><a href="yusuke.html">european</a></li>
-                <li><a href="jade.html">middle eastern</a></li>
+                <li><a href="eden.html">korea</a></li>
+                <li><a href="yusuke.html">japan</a></li>
+                <li><a href="jade.html">china</a></li>
             </ul>
         </nav>
     </header>
@@ -60,12 +66,12 @@
                 <li><i class="fa-solid fa-phone"></i><a href="tel:+1234567890">123-456-7890</a></li>
                 <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@dumplingsforever.com">info@dumplingsforever</a></li>
                 <li>
-                    <h6>location</h6>
+                    <h6><i class="fa-solid fa-globe"></i> location</h6>
                     <p>1234 567st, Lorem, Ipsum, Anonymous</p>
                 </li>
             </ul>
             <aside>
-                <h3>report</h3>
+                <h3>Report</h3>
                 <p>Help us to correct the wrong informations!</p>
                 <form action="index.html" method="get">
                     <input type="text" placeholder="Subject">
@@ -78,6 +84,7 @@
                         <option>Middle Eastern</option>
                     </select>
                     <textarea placeholder="Let us know what's wrong..."></textarea>
+                    <input type="submit" value="SEND">
                 </form>
             </aside>
         </section>
