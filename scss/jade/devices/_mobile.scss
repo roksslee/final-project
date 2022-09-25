@@ -14,6 +14,7 @@
     
     section {
         > article:first-child {
+            row-gap: 1vh;
             text-align: center;
         }
     }
@@ -80,6 +81,20 @@
             text-decoration: none;
             background-color: $defaultPink;
             transition: .4s;
+        }
+    }
+
+    .xiaolongbao {
+        background-color: $bgYellow;
+
+        // Bootstrap Scrollspy modify
+        .flex-column {
+            flex-direction: row;
+        }
+
+        .col-8 {
+            height: 60vh;
+            overflow-y: scroll;
         }
     }
 }
