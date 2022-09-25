@@ -1,0 +1,85 @@
+@media (min-width:300px) {
+    // for all sections
+    main {
+        > section {
+            padding: 10% 5%;
+            @include flexVertical;
+        }
+
+        h2 {
+            font-size: 28px;
+            text-transform: capitalize;
+        }
+    }
+    
+    section {
+        > article:first-child {
+            text-align: center;
+        }
+    }
+
+    // menu section
+    .menu {
+        background-color: whitesmoke;
+
+        article {
+            @include flexVertical(10vh);
+        }
+
+        figure {
+            @include flexVertical;
+
+            h4 {
+                color: $defaultGreen;
+                font-weight: 600;
+                text-transform: capitalize;
+                text-align: center;
+            }
+
+            div {
+                width: 20vh;
+                height: 20vh;
+                padding: 5%;
+                border: 5px dashed $bgOrange;
+                border-radius: 15%;
+                outline: 5px solid white;
+                box-shadow: 1px 3px 10px -2px $defaultBrown;
+            }
+
+            figcaption {
+                width: 80%;
+                @include flexVertical(1vh);
+                text-align: center;
+            }
+        }
+        
+        figure:first-child {
+            div {
+                @include bgImg('/img/xiaolongbao-icon.png', 15vh);
+            }
+        }
+
+        figure:nth-child(2) {
+            div {
+                @include bgImg('/img/jiaozi-icon.png', 15vh);
+            }
+        }
+
+        figure:last-child {
+            div {
+                @include bgImg('/img/wonton-icon.png', 15vh);
+            }
+        }
+
+        a {
+            width: 60%;
+            padding: 3%;
+            border-radius: 30px;
+            color: whitesmoke;
+            font-weight: 600;
+            text-decoration: none;
+            background-color: $defaultPink;
+            transition: .4s;
+        }
+    }
+}
