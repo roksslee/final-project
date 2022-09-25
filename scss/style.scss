@@ -1,2 +1,6 @@
 @import 'variables';
 @import 'normalize';
+
+// Jade SCSS files
+@import 'jade/mixins';
+@import 'jade/devices/mobile';

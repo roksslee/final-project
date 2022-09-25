@@ -1,0 +1,13 @@
+@mixin flexVertical($rowGap:3vh) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: $rowGap;
+}
+
+@mixin bgImg($url, $size:cover) {
+    background-image: url($url);
+    background-position: center;
+    background-size: $size;
+    background-repeat: no-repeat;
+}
