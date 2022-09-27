@@ -7,7 +7,7 @@
         }
 
         h2 {
-            font-size: 28px;
+            font-size: 30px;
             text-transform: capitalize;
         }
     }
@@ -23,6 +23,10 @@
     .menu {
         background-color: whitesmoke;
 
+        h2 {
+            color: $defaultGreen;
+        }
+
         article {
             @include flexVertical(10vh);
         }
@@ -31,9 +35,10 @@
             @include flexVertical;
 
             h4 {
-                color: $defaultGreen;
+                color: $defaultBrown;
+                font-size: 20px;
                 font-weight: 600;
-                text-transform: capitalize;
+                text-transform: uppercase;
                 text-align: center;
             }
 
@@ -84,17 +89,60 @@
         }
     }
 
+    // xiaolongbao section
     .xiaolongbao {
-        background-color: $bgYellow;
+        background-color: $defaultBrown;
+        color: whitesmoke;
 
-        // Bootstrap Scrollspy modify
-        .flex-column {
-            flex-direction: row;
+        img {
+            width: 15vh;
+            filter: invert(100%);
         }
 
-        .col-8 {
+        // Bootstrap Scrollspy modify
+        .navbar {
+            border-radius: 0.375rem;
+            justify-content: right;
+
+            a {
+                text-transform: uppercase;
+            }
+
+            .nav-link {
+                color: $defaultGreen;
+            }
+    
+            .nav-link.active {
+                color: whitesmoke;
+                background-color: $defaultGreen;
+            }
+
+            .dropdown-item:active, .dropdown-item.active {
+                background-color: $bgOrange;
+            }
+
+            .dropdown-menu[data-bs-popper] {
+                left: unset;
+                right: 0;
+            }
+
+        }
+
+        .scrollspy-example {
             height: 60vh;
             overflow-y: scroll;
+            color: dimgray;
+
+            %recipe {
+                color: $defaultGreen;
+                font-weight: 300;
+                text-transform: uppercase;
+                text-decoration: underline 1px dashed;
+            }
+
+            h4 {
+                @extend %recipe;
+            }
         }
     }
 }

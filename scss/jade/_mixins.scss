@@ -1,3 +1,13 @@
+@mixin flexAlign(
+    $justify: center,
+    $align: center
+) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+}
+
 @mixin flexVertical($rowGap:3vh) {
     display: flex;
     flex-direction: column;
