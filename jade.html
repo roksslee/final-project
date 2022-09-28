@@ -13,60 +13,46 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <!-- header start -->
   <header>
-    <figure>
-      <img src="./img/logo.png" alt="logo">
-      <figcaption>
-        <h1><span>east asian</span>dumplings</h1>
-      </figcaption>
-    </figure>
     <nav>
-      <!-- Bootstrap Dropdowns for Mobile navigation bar -->
-      <details class="nav-item dropdown">
-        <summary>
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
-          </a>
-        </summary>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">home</a></li>
-          <li><a class="dropdown-item" href="jade.html">china</a></li>
-          <li><a class="dropdown-item" href="eden.html">korea</a></li>
-          <li><a class="dropdown-item" href="yusuke.html">japan</a></li>
+      <aside>
+          <img src="/img/jiaozi-icon.png" alt="icon-1">
+          <h1>
+              Team EJY
+          </h1>
+      </aside>
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#jade.html">China</a></li>
+        <li><a href="#eden.html">Korea</a></li>
+        <li><a href="#yusuke.html">Japan</a></li>
+      </ul>
+
+      <details>
+        <summary class="fa-solid fa-bars"></summary>
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#jade.html">China</a></li>
+          <li><a href="#eden.html">Korea</a></li>
+          <li><a href="#yusuke.html">Japan</a></li>
         </ul>
       </details>
-      <!-- Bootstrap Dropdowns END -->
-        <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="jade.html">china</a></li>
-            <li><a href="eden.html">korea</a></li>
-            <li><a href="yusuke.html">japan</a></li>
-        </ul>
     </nav>
-      <!-- Bootstrap Carousel -->
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./img/xiaolongbao.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="./img/jiaozi.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="./img/wonton.jpg" class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!-- Bootstrap Carousel END -->
+
+    <section>
+        <article>
+            <h2>
+                Asia Dumplings
+            </h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod amet nam minus earum vero asperiores.
+            </p>
+            <a href="#">Get in touch</a>
+        </article>
+    </section>
   </header>
+  <!-- header end -->
   <main>
     <section class="menu" id="menu">
       <article>
@@ -75,6 +61,35 @@
         </h2>
         <p>Let's discover 3 types of many Chinese dumplings!</p>
       </article>
+      <!-- Bootstrap Carousel -->
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="#xiaolongbao" class="d-block w-100">
+              <h3>xiaolongbao</h3>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="#jiaozi" class="d-block w-100">
+              <h3>jiǎozi</h3>
+            </a>
+          </div>
+          <div class="carousel-item" class="d-block w-100">
+            <a href="#huntun" class="d-block w-100">
+              <h3>húntun</h3>
+            </a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Bootstrap Carousel END -->
       <article>
         <figure>
           <div></div>
@@ -126,33 +141,33 @@
       </article>
       <section>
         <!-- Bootstrap Scrollspy -->
-        <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+        <nav id="navbar-xiao" class="navbar bg-light px-3 mb-3">
           <ul class="nav nav-pills">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ingredients</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#scrollspyHeading1">wrapper</a></li>
-                <li><a class="dropdown-item" href="#scrollspyHeading2">filling</a></li>
-                <li><a class="dropdown-item" href="#scrollspyHeading3">dipping sause</a></li>
+                <li><a class="dropdown-item" href="#xiaoHeading1">wrapper</a></li>
+                <li><a class="dropdown-item" href="#xiaoHeading2">filling</a></li>
+                <li><a class="dropdown-item" href="#xiaoHeading3">dipping sause</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">cuisine</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#scrollspyHeading4">prepare the dough</a></li>
-                <li><a class="dropdown-item" href="#scrollspyHeading5">mix the filling</a></li>
-                <li><a class="dropdown-item" href="#scrollspyHeading6">roll the wrappers</a></li>
-                <li><a class="dropdown-item" href="#scrollspyHeading7">steam</a></li>
+                <li><a class="dropdown-item" href="#xiaoHeading4">prepare the dough</a></li>
+                <li><a class="dropdown-item" href="#xiaoHeading5">mix the filling</a></li>
+                <li><a class="dropdown-item" href="#xiaoHeading6">roll the wrappers</a></li>
+                <li><a class="dropdown-item" href="#xiaoHeading7">steam</a></li>
               </ul>
             </li>
           </ul>
         </nav>
-        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
-          <h4 id="scrollspyHeading1">wrapper</h4>
+        <div data-bs-spy="scroll" data-bs-target="#navbar-xiao" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+          <h4 id="xiaoHeading1">wrapper</h4>
           <p>180g all-purpose flour</p>
           <p>60g hot water</p>
           <p>35g tap water</p>
-          <h4 id="scrollspyHeading2">filling</h4>
+          <h4 id="xiaoHeading2">filling</h4>
           <p>450g minced pork</p>
           <p>3 stalks scallions, finely chopped</p>
           <p>1 tablespoon minced ginger</p>
@@ -161,22 +176,22 @@
           <p>¼ teaspoon ground white pepper</p>
           <p>¼ teaspoon salt</p>
           <p>½ teaspoon sugar</p>
-          <h4 id="scrollspyHeading3">dipping sause</h4>
+          <h4 id="xiaoHeading3">dipping sause</h4>
           <p>red rice vinegar</p>
           <p>ginger, julienned</p>
-          <h4 id="scrollspyHeading4">prepare the dough</h4>
+          <h4 id="xiaoHeading4">prepare the dough</h4>
           <p>In a mixing bowl, add hot water to the flour. Mix with chopsticks/spatula. Then add tap water.</p>
           <p>Combine and knead into a dough. Leave to rest (covered) for 10 minutes then knead again until very smooth.</p>
           <p>Cover and rest for a further 30-60 minutes until it becomes soft.</p>
-          <h4 id="scrollspyHeading5">mix the filling</h4>
+          <h4 id="xiaoHeading5">mix the filling</h4>
           <p>Mix minced pork with all the seasoning until well combined.</p>
           <p>Use a spoon to remove the layer of chicken fat on top of the aspic. Then use a fork to break it into tiny pieces. Add to the pork then mix well.</p>
           <p>Keep refrigerated for at least 30 mins. Don't take out until you are ready to assemble the dumplings.</p>
-          <h4 id="scrollspyHeading6">roll the wrappers</h4>
+          <h4 id="xiaoHeading6">roll the wrappers</h4>
           <p>Roll the dough into a rope. Divide into 20 pieces. Then press into discs with the palm of your hand. Cover at all times when not using (with cling film/in a plastic bag/with an upside-down bowl, etc.).</p>
           <p>With a rolling pin, use the “roll and turn” technique to flatten it into a very thin disc, about 12cm/4.7inch in diameter (Please refer to my tutorial video below). Dust the surface with flour if it sticks.</p>
           <p>N.B. Assemble the dumpling one by one as you roll out each wrapper (Do not stock up as they are very thin thus dry out very easily).</p>
-          <h4 id="scrollspyHeading7">steam</h4>
+          <h4 id="xiaoHeading7">steam</h4>
           <p>If you are using a metal steamer, you may brush a thin layer of oil on the basket to prevent sticking. Also, wrap the lid with a piece of cloth/tea towel to stop any condensation falling onto the dumplings during cooking.</p>
           <p>Place dumplings in (leave at least 3cm/1inch space between them).</p>
           <p>Bring water to a full boil in a wok/pot. Then put the steamer basket on top. Turn the heat to medium-low. Steam for 8 mins (if cooking over 10 dumplings at a time, increase to 10 mins).</p>
@@ -185,48 +200,191 @@
       </section>
     </section>
     <section class="jiaozi" id="jiaozi">
-        <article>
-            <h2>jiǎozi</h2>
-            <p>Jiǎozi is standard fare in Guangdong style dim sum.</p>
-            <p>There are many ways to fold jiǎozi, so you can make several different shapes of it.</p>
-            <p>The Chinese characters of jiǎozi is same with Japanese Gyoza, because Gyoza is originated from jiǎozi.</p>
-        </article>
+      <article>
+        <figure>
+          <img src="./img/jiaozi-icon.png" alt="jiaozi">
+        </figure>
+        <h2>jiaozi</h2>
+        <p>Jiǎozi is standard fare in Guangdong style dim sum.</p>
+        <p>There are many ways to fold jiǎozi, so you can make several different shapes of it.</p>
+        <p>The Chinese characters of jiǎozi is same with Japanese Gyoza, because Gyoza is originated from jiǎozi.</p>
+      </article>
+      <section>
+        <!-- Bootstrap Scrollspy -->
+        <nav id="navbar-jiaozi" class="navbar bg-light px-3 mb-3">
+          <ul class="nav nav-pills">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ingredients</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#jiaoziHeading1">wrapper</a></li>
+                <li><a class="dropdown-item" href="#jiaoziHeading2">filling</a></li>
+                <li><a class="dropdown-item" href="#jiaoziHeading3">dipping sause</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">cuisine</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#jiaoziHeading4">prepare the dough</a></li>
+                <li><a class="dropdown-item" href="#jiaoziHeading5">mix the filling</a></li>
+                <li><a class="dropdown-item" href="#jiaoziHeading6">roll the wrappers</a></li>
+                <li><a class="dropdown-item" href="#jiaoziHeading7">steam</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div data-bs-spy="scroll" data-bs-target="#navbar-jiaozi" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+          <h4 id="jiaoziHeading1">wrapper</h4>
+          <p>3 cups all-purpose flour, more for dusting</p>
+          <p>¼ teaspoon kosher salt</p>
+          <p>1 ¼ cups cold water</p>
+          <h4 id="jiaoziHeading2">filling</h4>
+          <p>1 pound ground pork, or ground beef</p>
+          <p>1 tablespoon soy sauce</p>
+          <p>1 teaspoon kosher salt
+          </p>
+          <p>1 tablespoon Chinese rice wine, or dry sherry</p>
+          <p>¼ teaspoon freshly ground white pepper</p>
+          <p>¼ 3 tablespoons sesame oil</p>
+          <p>½ medium scallion, finely minced</p>
+          <p>1 ½ cups finely shredded napa cabbage</p>
+          <p>¼ cup shredded bamboo shoots</p>
+          <p>1 tablespoon minced fresh ginger</p>
+          <p>1 clove garlic, minced</p>
+          <h4 id="jiaoziHeading4">prepare the dough</h4>
+          <p>Place the flour in a bowl and stir in the salt. Slowly stir in the cold water, adding only as much as is necessary to form a smooth dough.</p>
+          <p>Place the dough on a flat surface and knead into a smooth ball.</p>
+          <p>Cover the dough and let it rest for at least 30 minutes.</p>
+          <h4 id="jiaoziHeading5">mix the filling</h4>
+          <p>While the dough is resting, make the filling. Place the meat in a bowl and add the soy sauce, salt, rice wine, and pepper. Stir in only one direction.</p>
+          <p>Add the remaining filling ingredients and mix well, stirring in the same direction until the mixture is sticky.</p>
+          <h4 id="jiaoziHeading6">roll the wrappers</h4>
+          <p>Knead the dough again until it forms a smooth ball.</p>
+          <p>Divide the dough into 60 pieces, with each piece weighing about 1/2 ounce (15 grams). Roll each piece out into a circle about 3 inches in diameter, lightly flouring the surface as needed to keep the dough from sticking.</p>
+          <p>Place a small portion (about 1 level tablespoon) of the filling into the middle of each wrapper.</p>
+          <p>Wet the edges of the dumpling with water.</p>
+          <p>For a pleated look, gently lift the edges of the wrapper over the filling and bring it together at the top center. Crimp the edges of the wrapper several times along the edge and pinch together to seal. For an easier option, simply fold the dough over the filling into a half-moon shape and pinch the edges to seal. Repeat with the remaining wrappers and filling.</p>
+          <h4 id="jiaoziHeading7">steam</h4>
+          <p>Bring a large pot of water to a boil. Add half the dumplings, giving them a gentle stir so they don't stick together. Once the water returns to a boil, add 1/2 cup of cold water and cover the pot. Once the water returns to a boil, add another 1/2 cup of cold water and cover.</p>
+          <p>When the water comes to a boil again, the dumplings should be fully cooked and ready to be removed from the pot and drained. You can cut open a test dumpling just to make sure.</p>
+          <p>If desired, they can be pan-fried at this point. Add 3 tablespoons of oil to a frying pan and cook until slightly golden.</p>
+        </div>
+        <!-- Bootstrap Scrollspy END -->
+      </section>
     </section>
     <section class="huntun" id="huntun">
-        <article>
-            <h2>húntun</h2>
-            <p>Húntun are commonly boiled and served in soup or sometimes deep-fried.</p>
-            <p>The most versatile shape is a simple right triangle, made by folding the square wrapper in half by pulling together two diagonally opposite corners.</p>
-        </article>
+      <article>
+        <figure>
+          <img src="./img/wonton-icon.png" alt="huntun">
+        </figure>
+        <h2>húntun</h2>
+        <p>Húntun are commonly boiled and served in soup or sometimes deep-fried.</p>
+        <p>The most versatile shape is a simple right triangle, made by folding the square wrapper in half by pulling together two diagonally opposite corners.</p>
+      </article>
+      <section>
+        <!-- Bootstrap Scrollspy -->
+        <nav id="navbar-wonton" class="navbar bg-light px-3 mb-3">
+          <ul class="nav nav-pills">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ingredients</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#wontonHeading1">filling</a></li>
+                <li><a class="dropdown-item" href="#wontonHeading2">broth</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">cuisine</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#wontonHeading3">mix the filling</a></li>
+                <li><a class="dropdown-item" href="#wontonHeading4">roll the wrappers</a></li>
+                <li><a class="dropdown-item" href="#wontonHeading5">cook or freeze</a></li>
+                <li><a class="dropdown-item" href="#wontonHeading6">broth</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div data-bs-spy="scroll" data-bs-target="#navbar-wonton" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+          <h4 id="wontonHeading1">filling</h4>
+          <p>(You can buy wonton wrappers at the grocery stores)</p>
+          <p>200g lean pork mince (ground pork)</p>
+          <p>200g peeled prawns or shrimp, roughly chopped</p>
+          <p>1 tablespoon ginger, finely grated</p>
+          <p>2 shallots or green onions</p>
+          <p>1 tablespoons light soy sauce</p>
+          <p>2 tablespoons Chinese cooking wine</p>
+          <p>½ teaspoon salt</p>
+          <p>2 tablespoons sesame oil, toasted</p>
+          <h4 id="wontonHeading2">broth</h4>
+          <p>3 cups or 750 ml chicken broth</p>
+          <p>2 garlic cloves, smashed</p>
+          <p>⅓" or 1 cm piece of ginger, sliced</p>
+          <p>1½ tablespoons light soy sauce</p>
+          <p>2 teaspoon sugar</p>
+          <p>1½ tablespoons chinese cooking wine</p>
+          <p>¼ - ½ teaspoon sesame oil</p>
+          <h4 id="wontonHeading3">mix the filling</h4>
+          <p>Place Filling ingredients in a bowl. Use a potato masher to mash until fairly smooth - about 20 mashes.</p>
+          <p>Don't turn the prawn into a complete paste, small chunks are good.</p>
+          <h4 id="wontonHeading4">roll the wrappers</h4>
+          <p>Use My Way (better Wonton Soup experience!) or the Asian Grocery Store Way (easier to pack for freezing).</p>
+          <p>Lay Wontons on work surface. Use 2 teaspoons to put the Filling on the wontons. Work in batches of 5 if starting out, up to 15 or 20 if confident. Brush 2 edges with water. Fold to seal, pressing out air. Brush water on one corner and bring corners together, pressing to seal.
+          </p>
+          <p>Place wrapped wontons into a container with a lid as you work (so they don't dry out).</p>
+          <h4 id="wontonHeading5">cook or freeze</h4>
+          <p>To cook: bring a large pot of water to boil. Place wontons in water and cook for 4 minutes or until they float. Remove with slotted spoon straight into serving bowls. Ladle over broth.</p>
+          <p>To freeze: Freeze uncooked in airtight containers. Cook from frozen for 6 to 8 minutes. IMPORTANT: Do not freeze if you made this with defrosted frozen prawns.</p>
+          <h4 id="wontonHeading6">broth</h4>
+          <p>Place Broth ingredients in a saucepan over high heat. Add white ends of scallions/shallots if leftover from Wonton filling.</p>
+          <p>Place lid on, bring to simmer then reduce to medium high and simmer for 5 - 10 minutes to allow the flavours to infuse. Pick garlic and ginger out before using.</p>
+          <p>If using vegetables, blanch in the soup broth and place in serving bowl.</p>
+        </div>
+        <!-- Bootstrap Scrollspy END -->
+      </section>
     </section>
     <section class="location" id="location">
         <article>
             <h2>locations of Chinese Restaurant</h2>
             <p>This list will help you to find the Chinese restaurants in Vancouver which serves fine dumplings we introduce.</p>
         </article>
+        <section>
+          <ul>
+            <li><a href="#chili">chili pepper house</a></li>
+            <li><a href="#grand">grand chinese restaurant</a></li>
+            <li><a href="#chong">chongqing on commercial</a></li>
+            <li><a href="#lin">lin chinese cuisine and tea house</a></li>
+          </ul>
+          <article>
+            <iframe id="chili" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47658.93956334193!2d-123.12537233903645!3d49.29349945930742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867697426696bd%3A0x566d70da847e1e2!2sChili%20Pepper%20House!5e0!3m2!1sen!2sca!4v1664335178406!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe id="grand" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47658.93956334193!2d-123.12537233903645!3d49.29349945930742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867731d547f015%3A0xc89539b1180dbe80!2zR3JhbmQgQ2hpbmVzZSBSZXN0YXVyYW50ICjonIDojoop!5e0!3m2!1sen!2sca!4v1664335200325!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe id="chong" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47658.93956334193!2d-123.12537233903645!3d49.29349945930742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486714dd324e307%3A0x1ef38bb387ec79ff!2sChongQing%20On%20Commercial!5e0!3m2!1sen!2sca!4v1664335227128!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe id="lin" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83317.31410998669!2d-123.21986011091978!3d49.263775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673c78faf1b6f%3A0xf262d35f0078317f!2sLin%20Chinese%20Cuisine%20and%20Tea%20House!5e0!3m2!1sen!2sca!4v1664335255118!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </article>
+        </section>
     </section>
   </main>
   <footer>
-      <aside>
-          <h3>Source of References</h3>
-          <ul>
-              <li><a href="https://en.wikipedia.org/wiki/Xiaolongbao" target="_blank">wikipedia - xiaolongbao</a></li>
-              <li><a href="https://en.wikipedia.org/wiki/jiaozi" target="_blank">wikipedia - jiǎozi</a></li>
-              <li><a href="https://en.wikipedia.org/wiki/Wonton" target="_blank">wikipedia - wonton</a></li>
-              <li><a href="https://redhousespice.com/xiao-long-bao-soup-dumplings/" target="_blank">red house spice</a></li>
-          </ul>
-      </aside>
-      <aside>
-          <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-          <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
-          <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-          <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
-          <a href="https://www.github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.google.ca" target="_blank"><i class="fa-brands fa-google"></i></a>
-      </aside>
-      <p>
-          Copyright &copy; 2022 <a href="index.html">Team EJY</a>. All rights reserved.
-      </p>
+    <aside>
+      <h3>Source of References</h3>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Xiaolongbao" target="_blank">wikipedia - xiaolongbao</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/jiaozi" target="_blank">wikipedia - jiǎozi</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Wonton" target="_blank">wikipedia - wonton</a></li>
+        <li><a href="https://redhousespice.com/xiao-long-bao-soup-dumplings/" target="_blank">red house spice</a></li>
+        <li><a href="https://www.thespruceeats.com/jiaozi-chinese-dumplings-694504" target="_blank">the spruce eats</a></li>
+        <li><a href="https://www.recipetineats.com/wonton-soup/" target="_blank">recipe tin eats</a></li>
+        <li><a href="https://maps.google.ca/" target="_blank">google maps</a></li>
+      </ul>
+    </aside>
+    <aside>
+      <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+      <a href="https://www.github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.google.ca" target="_blank"><i class="fa-brands fa-google"></i></a>
+    </aside>
+    <p>
+      Copyright &copy; 2022 <a href="index.html">Team EJY</a>. All rights reserved.
+    </p>
   </footer>
 </body>
 </html>

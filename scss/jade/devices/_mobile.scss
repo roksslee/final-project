@@ -1,12 +1,15 @@
-@media (min-width:300px) {
+@media (min-width:200px) {
     // for all sections
     main {
+        background-color: whitesmoke;
+
         > section {
             padding: 10% 5%;
             @include flexVertical;
         }
 
         h2 {
+            color: $defaultGreen;
             font-size: 30px;
             text-transform: capitalize;
         }
@@ -23,10 +26,6 @@
     .menu {
         background-color: whitesmoke;
 
-        h2 {
-            color: $defaultGreen;
-        }
-
         article {
             @include flexVertical(10vh);
         }
@@ -35,7 +34,7 @@
             @include flexVertical;
 
             h4 {
-                color: $defaultBrown;
+                color: $defaultGreen;
                 font-size: 20px;
                 font-weight: 600;
                 text-transform: uppercase;
@@ -50,6 +49,7 @@
                 border-radius: 15%;
                 outline: 5px solid white;
                 box-shadow: 1px 3px 10px -2px $defaultBrown;
+                transition: .3s;
             }
 
             figcaption {
@@ -86,62 +86,189 @@
             text-decoration: none;
             background-color: $defaultPink;
             transition: .4s;
+
+            &:hover {
+                color: gray;
+                box-shadow: inset 0px 1px 4px $defaultPink;
+                background-image: linear-gradient(to right, $bgYellow, $bgOrange);
+            }
         }
     }
 
-    // xiaolongbao section
-    .xiaolongbao {
-        background-color: $defaultBrown;
-        color: whitesmoke;
+    // Bootstrap Carousel modify
+    .carousel {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        overflow-y: hidden;
+        cursor: pointer;
+        
+        .carousel-inner {
+            height: 100%;
+        }
+        
+        a {
+            height: 100%;
+            border-radius: unset;
+            padding: 0;
+            transition: .3s;
+            
+            h3 {
+                width: 100%;
+                height: 100%;
+                color: transparent;
+                font-weight: 300;
+                text-transform: uppercase;
+                @include flexAlign;
+                transition: .3s;
+            }
+        }
+        
+        img {
+            padding-bottom: 30%;
+            z-index: 0;
+        }
+        
+        &:hover {
+            
+            a {
+            }
+            
+            h3 {
+                background-color: rgba(0,0,0,.5);
+                color: whitesmoke;
+            }
+        }
+    }
+
+    .carousel-item {
+        height: 100%;
+
+        &:first-child {
+            a {
+                @include bgImg('/img/xiaolongbao.jpg');
+            }
+        }
+
+        &:nth-child(2) {
+            a {
+                @include bgImg('/img/jiaozi.jpg');
+            }
+        }
+
+        &:last-child {
+            a {
+                @include bgImg('/img/wonton.jpg');
+            }
+        }
+    }
+
+    // Bootstrap Scrollspy modify
+    .navbar {
+        border-radius: 0.375rem;
+        justify-content: right;
+
+        a {
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            color: $defaultGreen;
+        }
+
+        .nav-link.active {
+            color: whitesmoke;
+            background-color: $defaultGreen;
+        }
+
+        .dropdown-item:active, .dropdown-item.active {
+            background-color: $bgOrange;
+        }
+
+        .dropdown-menu[data-bs-popper] {
+            left: unset;
+            right: 0;
+        }
+
+    }
+
+    .scrollspy-example {
+        height: 60vh;
+        overflow-y: scroll;
+        color: dimgray;
+
+        %recipe {
+            color: $defaultGreen;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-decoration: underline 1px dashed;
+        }
+
+        h4 {
+            @extend %recipe;
+        }
+    }
+
+    // recipe section
+    .xiaolongbao, .jiaozi, .huntun {
 
         img {
             width: 15vh;
-            filter: invert(100%);
+            padding: 2%;
+            transition: .2s;
+
+            &:hover {
+                padding: 1.5% 2% 2.5% 2%;
+            }
+        }
+    }
+
+    .location {
+        > section {
+            width: 100%;
+            @include flexVertical(5vh);
+
+            article {
+                width: 100%;
+                @include flexVertical;
+            }
+
         }
 
-        // Bootstrap Scrollspy modify
-        .navbar {
-            border-radius: 0.375rem;
-            justify-content: right;
+        ul {
+            padding: 0;
+            border-radius: 1vh;
+            background-color: white;
+            @include flexVertical(0);
+            align-items: flex-start;
+            overflow: hidden;
 
-            a {
-                text-transform: uppercase;
+            li {
+                width: 100%;
+                @include flexAlign;
             }
+        }
 
-            .nav-link {
-                color: $defaultGreen;
-            }
-    
-            .nav-link.active {
-                color: whitesmoke;
+        a {
+            width: 100%;
+            padding: 3%;
+            color: gray;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover {
                 background-color: $defaultGreen;
+                color: whitesmoke;
             }
-
-            .dropdown-item:active, .dropdown-item.active {
-                background-color: $bgOrange;
-            }
-
-            .dropdown-menu[data-bs-popper] {
-                left: unset;
-                right: 0;
-            }
-
         }
 
-        .scrollspy-example {
-            height: 60vh;
-            overflow-y: scroll;
-            color: dimgray;
+        iframe {
+            width: 100%;
+            height: 25vh;
+            transition: .3s;
 
-            %recipe {
-                color: $defaultGreen;
-                font-weight: 300;
-                text-transform: uppercase;
-                text-decoration: underline 1px dashed;
-            }
-
-            h4 {
-                @extend %recipe;
+            &:hover {
+                filter: brightness(80%);
             }
         }
     }
