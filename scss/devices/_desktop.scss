@@ -1,0 +1,85 @@
+*{
+    // border: 1px solid red;
+}
+
+@media (min-width:1000px){
+
+    .about{
+        >article{
+            row-gap: 5vh;
+        }
+    }
+
+    .history{
+        >article{
+            row-gap: 5vh;
+        }
+
+        img{
+            padding-top: 35%;
+        }
+    }
+
+    .type{
+        img{
+            width: 35vh;
+            height: 35vh;
+        }
+
+        >section{
+            p{
+                width: 80%;
+            }
+        }
+    }
+
+    .place{
+        >section{
+            flex-direction: row;
+            column-gap: 1vh;
+        }
+
+        .tokyo,
+        .osaka,
+        .yokohama{
+            justify-content: space-between;
+            width: 100%;
+            p{
+                width: 70%;
+            }   
+        }
+    }
+
+    .opinion{
+        >section{
+            width: 96%;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+
+        figure{
+            flex-direction: row;
+            justify-content: space-between;
+            column-gap: 4vh;
+            width: 100%;
+            padding-left:2%;
+            padding-right: 2%;
+
+            >figcaption{
+                width: 100%;
+                align-items: flex-start;
+                row-gap: 4vh;
+            }
+
+            blockquote{
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        img{
+            width: 20vh;
+            height: 20vh;
+        }
+    }
+}
