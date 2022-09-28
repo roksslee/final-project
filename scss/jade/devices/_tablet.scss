@@ -1,7 +1,66 @@
-/*
-&:hover {
-    color: gray;
-    box-shadow: inset 0px 1px 4px $defaultPink;
-    background-image: linear-gradient(to right, $bgYellow, $bgOrange);
+@media (min-width:600px) {
+    .menu {
+        row-gap: 5vh;
+
+        figure {
+            flex-direction: row;
+            align-items: flex-start;
+            column-gap: 2vh;
+
+            h4 {
+                text-align: left;
+            }
+
+            div {
+                width: 15vh;
+                height: 15vh;
+            }
+            
+            figcaption {
+                padding-top: 3%;
+                align-items: flex-end;
+    
+            }
+
+            aside {
+                text-align: left;
+                @include flexVertical(0);
+                align-items: flex-start;
+            }
+        }
+
+        figure:first-child,
+        figure:nth-child(2),
+        figure:last-child {
+            div {
+                background-size: 10vh;
+            }
+        }
+
+        a {
+            width: 30%;
+        }
+    }
+
+    .carousel {
+        height: 30vh;
+    }
+
+    .scrollspy-example {
+        height: 40vh;
+    }
+
+    .location {
+        > section {
+            article {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+            iframe {
+                width: 48%;
+            }
+        }
+    }
 }
-*/
