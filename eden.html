@@ -13,44 +13,45 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-        <figure>
-            <img src="./img/logo.png" alt="logo">
-            <figcaption>
-                <h1><span>east asian</span>dumplings</h1>
-            </figcaption>
-        </figure>
-        <nav>
-            <!-- Bootstrap Dropdowns for Mobile navigation bar -->
-            <details class="nav-item dropdown">
-                <summary>
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-bars"></i>
-                    </a>
-                </summary>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">home</a></li>
-                    <li><a class="dropdown-item" href="jade.html">china</a></li>
-                    <li><a class="dropdown-item" href="eden.html">korea</a></li>
-                    <li><a class="dropdown-item" href="yusuke.html">japan</a></li>
-                </ul>
-            </details>
-            <!-- Bootstrap Dropdowns END -->
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="jade.html">china</a></li>
-                <li><a href="eden.html">korea</a></li>
-                <li><a href="yusuke.html">japan</a></li>
-            </ul>
-        </nav>
-    </header>
-    
     <main>
 
-        <!-- Main Title -->
-        <h2>
-            korean dumpling
-        </h2>
+        <header class="header">
+            <nav>
+                <figure>
+                    <img src="./img/logo.png" alt="logo">
+                    <figcaption>
+                        <h1><span>east asian</span>dumplings</h1>
+                    </figcaption>
+                </figure>
+                <!-- Bootstrap Dropdowns for Mobile navigation bar -->
+                <details class="nav-item dropdown mobilenav">
+                    <summary>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                    </summary>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">home</a></li>
+                        <li><a class="dropdown-item" href="jade.html">china</a></li>
+                        <li><a class="dropdown-item" href="eden.html">korea</a></li>
+                        <li><a class="dropdown-item" href="yusuke.html">japan</a></li>
+                    </ul>
+                </details>
+            </nav>
+            <nav>
+                <!-- Main Title -->
+                <h2>
+                    korean dumpling
+                </h2>
+                <!-- Bootstrap Dropdowns END -->
+                <ul class="originalnav">
+                    <li><a href="#">home</a></li>
+                    <li><a href="jade.html">china</a></li>
+                    <li><a href="eden.html">korea</a></li>
+                    <li><a href="yusuke.html">japan</a></li>
+                </ul>
+            </nav>
+        </header>
         
         <!-- About -->
         <section class="about">
@@ -82,7 +83,7 @@
             </aside>
         </section>
 
-        <!-- Menus -->
+        <!-- types -->
         <section class="type">
             <h3>
                 mandu type
@@ -121,7 +122,7 @@
                 </aside>
 
             </article>
-                <a href="https://en.wikipedia.org/wiki/Mandu_(food)" target="_blank">Read More...</a>
+                <a class=readmore href="https://en.wikipedia.org/wiki/Mandu_(food)" target="_blank">Read More...</a>
         </section>
 
         <!-- Variation -->
@@ -157,31 +158,31 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20837.710892818875!2d-122.89077800000001!3d49.243914!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xad817352da7db699!2sMyung%20Ga%20Mandu!5e0!3m2!1sen!2sca!4v1664316813247!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </article>
         </section>
-    </main>
 
-    <!-- Footer -->
-    <footer>
-        <aside>
-            <h3>Source of References</h3>
-            <ul>
-                <li><a href="https://en.wikipedia.org/wiki/Mandu_(food)" target="_blank">Mandu (food) - Wikipedia</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Dumpling#Korean" target="_blank">dumpling - Wikipedia</a></li>
-                <li><a href="https://www.koreanbapsang.com/mandu-korean-dumplings_20/" target="_blank">Mandu (Korean Dumplings)</a></li>
-                <li><a href="https://www.10000recipe.com/recipe/6574177" target="_blank">Mandu-guk Recipe(Korean)</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Mandu-guk" target="_blank">Mandu-guk - Wikipedia</a></li>
-            </ul>
-        </aside>
-        <aside>
-            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
-            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
-            <a href="https://www.github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.google.ca" target="_blank"><i class="fa-brands fa-google"></i></a>
-        </aside>
-        <p>
-            Copyright &copy; 2022 <a href="index.html">Team EJY</a>. All rights reserved.
-        </p>
-    </footer>
+        <!-- Footer -->
+        <footer>
+            <aside>
+                <h3>Source of References</h3>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Mandu_(food)" target="_blank">Mandu (food) - Wikipedia</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Dumpling#Korean" target="_blank">dumpling - Wikipedia</a></li>
+                    <li><a href="https://www.koreanbapsang.com/mandu-korean-dumplings_20/" target="_blank">Mandu (Korean Dumplings)</a></li>
+                    <li><a href="https://www.10000recipe.com/recipe/6574177" target="_blank">Mandu-guk Recipe(Korean)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Mandu-guk" target="_blank">Mandu-guk - Wikipedia</a></li>
+                </ul>
+            </aside>
+            <aside class="sns">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="https://www.github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.google.ca" target="_blank"><i class="fa-brands fa-google"></i></a>
+            </aside>
+            <p>
+                Copyright &copy; 2022 <a href="index.html">Team EJY</a>. All rights reserved.
+            </p>
+        </footer>
+    </main>
 </body>
 </html>

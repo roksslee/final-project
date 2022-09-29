@@ -1,0 +1,36 @@
+@mixin edenColumn1 {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin edenColumn2 {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin edenColumnPerfect($center, $row) {
+    display: flex;
+    flex-direction: column;
+    align-items: $center;
+    row-gap: $row;
+}
+
+@mixin edenJustify {
+    display: flex;
+    justify-content: center;
+}
+
+
+@mixin edenJustifyAlign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin edenRow($row) {
+    display: flex;
+    flex-direction: column;
+    row-gap: $row;
+}
+
