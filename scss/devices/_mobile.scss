@@ -9,8 +9,8 @@
             margin: 0%;
     }
 
-    figure {
-        border: 0px transparent none;
+    img, iframe {
+        border-radius: 5px;
     }
 
     header{
@@ -23,28 +23,104 @@
     
 
         figure {
-            @include edenColumn2;
+            @include edenJustify;
+        }
+
+        figure {
+            border: 0px transparent none;
+        }
+
+        #h1 {
+            padding-left: 3px;
+            font-size: 15px;
         }
 
         img {
-            width: 50px;
+            width: 40px;
         }
 
         figcaption {
             display: flex;
             align-items: flex-end;
+            display: flex;
+            padding-left: 3px;
+        }
+
+        main {
+            position: relative;
+        }
+
+    }
+
+    nav {
+
+        justify-content: space-between;
+        position: relative;
+
+        h2 {
+            text-align: center;
+            color: $bgYellow;
+        }
+
+        details {
+            position: absolute;
+            width: 100%;
+            font-size: 20px;
+            height: 25vh;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        summary {
+            width: 100%;
+            text-align: center;
+        }
+
+        details > ul {
+            background-color: $bgYellow;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            @include edenColumn1;
+            align-items: center;
+        }
+
+        details li {
+            display: flex;
+            width: 85%;
+        }
+
+        details a {
+            width: 100%;
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            text-align: center;
+            padding: 2%;
+         }
+
+         .bottom {
+            border-bottom: 1px solid $defaultBrown;
+         }
+
+        summary {
+            @include edenJustify;
+            
+        }
+
+        .fa-bars {
+            color: $bgYellow;
+            font-size: 25px;
+        }
+
+        article {
+            height: 35vh;
+            @include edenJustifyAlign;
         }
     }
 
-    nav:first-child {
-        display:flex;
-    }
-
-    nav:last-child {
-        height: 35vh;
-        @include edenJustify;
-        color: $bgYellow;
-    }
+    
 
     .originalnav {
         display: none;
@@ -52,7 +128,7 @@
 
     main {
         background-color: $bgYellow;
-        @include edenColumnPerfect(center, 7vh)
+        @include edenColumnPerfect(center, 3vh)
     }
 
     .about, .history, .type, .variation, .restaurants {
@@ -92,6 +168,10 @@
         display: flex;
         align-items: center;
 
+        h3 {
+            padding-top: 5%;
+        }
+
         aside {
 
             @include edenColumnPerfect(center, 3vh);
@@ -115,12 +195,19 @@
 
     .type {
 
+        width: 90%;
+        @include edenColumn2;
+
         article {
             @include edenColumnPerfect(center, 3vh);
         }
 
         a {
             text-decoration: none;
+        }
+
+        a:hover {
+            color: $defaultGreen;
         }
 
         .readmore {
@@ -140,6 +227,11 @@
 
         background-color: $bgOrange;
         width: 100%;
+
+        h3 {
+            padding-top: 4%;
+        }
+        
         
         article {
             @include edenColumnPerfect(center, 1vh);
@@ -173,11 +265,12 @@
                 color: black;
                 text-decoration: none;
                 font-weight: 600;
-                font-size: 26px;
+                font-size: 20px;
             }
 
             iframe {
                 width: 100%;
+                height: 40vh;
             }
         }
     }
@@ -189,18 +282,26 @@
         text-align: center;
         width: 100%;
 
+        h3 {
+            margin-top: 4%;
+        }
+
         aside {
-            width: 100%;
+            width: 90%;
         }
 
         ul {
             list-style: none;
+            
         }
 
         a {
             color: $bgYellow;
             text-decoration: none;
-            
+        }
+
+        a:hover {
+            color: $defaultPink;
         }
 
         .sns {
