@@ -2,5 +2,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Poppins:wght@200&family=Quicksand:wght@300&display=swap');
 
 *{
-    font-family: 'lora',serif;
+    font-familsy: 'lora',serif;
 }
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+    font-weight: 300;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    color: $defaultBrown;
+    font-family: 'Sonsie One';
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Caveat';
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.5;
+}
+
+// Profile section start
+.profile{
+    img{
+        width: 25vh;
+        height: 25vh;
+        border-radius: 50%;
+    }
+}
+// Profile section end
+
+// Discovery section start
+.discovery{
+    >section{
+        color: whitesmoke;
+        a{
+            color: whitesmoke;
+            text-decoration:none;
+        }
+
+        aside{
+            background-color: hwb(60 22% 78% / 0.296);
+        }
+    }    
+}
+
+.china{
+    background-image: url(/img/pic-01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.korea{
+    background-image: url(/img/pic-02.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.japan{
+    background-image: url(/img/pic-03.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+// Discovery section end
