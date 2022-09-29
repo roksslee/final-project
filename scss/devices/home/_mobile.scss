@@ -1,0 +1,133 @@
+*{
+    // border: 1px solid red;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    align-items: center;
+    background-image: url(/img/homepro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    >article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: whitesmoke;
+        row-gap: 1vh;
+    }
+
+    h3{
+        text-transform: capitalize;
+        font-size: 45px;
+        color: whitesmoke;
+        border-bottom: 1px solid whitesmoke;
+    }
+
+    figure{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+        align-items: center;
+        padding-top:5%;
+        padding-bottom: 5%;
+        border-radius: 5vh;
+        background-color: rgba(233, 229, 229,0.6);
+        width: 85%;
+    }
+
+    figcaption{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vh;
+        align-items: center;
+    }
+
+    h4{
+        font-size: 25px;
+        color: $defaultBrown;
+        border-bottom: 3px solid $defaultBrown;
+    }
+
+    h5{
+        font-size: 23px;
+        color: $defaultBrown
+    }
+
+    aside{
+        display: flex;
+        column-gap: 3vh;
+        font-size: 25px;
+    }
+}
+
+.discovery{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    align-items: center;
+    text-align: center;
+
+    >article{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vh;
+        align-items: center;
+    }
+
+    h3{
+        color: $defaultBrown;
+        border-bottom: 1px solid $defaultBrown;
+        font-size: 45px;
+    }
+
+    >section{
+        >article{
+            height: 40vh;
+        }
+
+        aside{
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            row-gap: 2vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h4{
+            font-size: 30px;
+            border-bottom: 3px solid whitesmoke;
+            width: fit-content;
+            padding-bottom: 2%;
+        }
+
+        p{
+            width: 80%;
+        }
+
+        a{
+            padding: 3%;
+            border: 2px solid whitesmoke;
+            background-color: rgba(207, 221, 236,0.5);
+        }
+
+        a:hover{
+            cursor: pointer;
+            color: rgb(200, 195, 195);
+            background-color: rgba(207, 221, 236,0.1);
+        }
+    }
+}

@@ -4,6 +4,8 @@
     margin: 0;
 }
 
+@import 'mixins';
+
     header{
         >section{
             background-image: url(/img/header.jpg);

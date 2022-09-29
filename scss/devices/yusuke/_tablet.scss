@@ -2,6 +2,8 @@
     // border: 1px solid red;
 }
 
+@import 'mixins';
+
     nav{
         details{
             display: none;
@@ -116,7 +118,7 @@
             }
 
             p{
-                height:25vh;
+                height:40vh;
                 width: 90%;
             }
         }
