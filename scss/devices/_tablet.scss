@@ -1,0 +1,45 @@
+@media (min-width:600px) {
+
+    nav {
+
+        details, summary {
+            display: none;
+        }
+        
+        > article {
+
+            @include edenColumn1;
+
+            figure {
+                background-color: $bgYellow;
+            }
+            .originalnav {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            ul {
+                width: 50%;
+                list-style: none;
+            }
+
+            a {
+                color: $bgYellow;
+                text-decoration: none;
+            }
+
+        }
+
+    }
+    
+    .restaurant {
+        
+        display: flex;
+
+        article {
+            width: 10%;
+        }
+            
+    }
+    
+}
