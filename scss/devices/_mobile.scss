@@ -23,7 +23,7 @@
     
 
         figure {
-            @include EdenColumn2;
+            @include edenColumn2;
         }
 
         img {
@@ -42,7 +42,7 @@
 
     nav:last-child {
         height: 35vh;
-        @include EdenJustify;
+        @include edenJustify;
         color: $bgYellow;
     }
 
@@ -52,11 +52,11 @@
 
     main {
         background-color: $bgYellow;
-        @include EdenColumnPerfect(center, 7vh)
+        @include edenColumnPerfect(center, 7vh)
     }
 
     .about, .history, .type, .variation, .restaurants {
-        @include EdenColumnPerfect(center, 5vh);
+        @include edenColumnPerfect(center, 5vh);
     }
 
     h2 {
@@ -66,11 +66,11 @@
 
     .about {
         
-        @include EdenColumn1;
+        @include edenColumn1;
         width: 90%;
 
         figure {
-            @include EdenColumn2;
+            @include edenColumn2;
         }
 
         img {
@@ -82,32 +82,35 @@
         }
 
         > aside {
-            @include EdenRow(1vh);
+            @include edenRow(1vh);
         }
     }
 
     .history {
 
+        background-color: $bgOrange;
+        display: flex;
+        align-items: center;
+
+        aside {
+
+            @include edenColumnPerfect(center, 3vh);
+
+
+            figure {
+                @include edenColumn2;
+            }
     
-        @include edenJustify;
+            img {
+                width: 90%;
+            }
+            
+            p {
+                text-align: center;
+                width: 90%;
+            }
+        }
         
-
-        figure {
-            @include edenColumn2;
-        }
-
-        img {
-            width: 90%;
-        }
-        
-        p {
-            text-align: center;
-            width: 90%;
-        }
-
-        > aside {
-            @include edenRow(1vh);
-        }
     }
 
     .type {
@@ -135,20 +138,28 @@
 
     .variation {
 
-        background-color: $defaultPink;
-        width: 90%;
-        @include edenRow(3vh);
+        background-color: $bgOrange;
+        width: 100%;
+        
+        article {
+            @include edenColumnPerfect(center, 1vh);
+        }
+
+        h4 {
+            width: 90%;
+        }
 
         figure {
-            @include edenRow(1vh);
+            @include edenColumnPerfect(center, 3vh)
         }
 
         img {
-            width: 100%;
+            width: 90%;
         }
         
-        p {
+        figcaption {
             text-align: center;
+            width: 90%;
         }
 
     }
