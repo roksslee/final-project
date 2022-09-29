@@ -1,0 +1,16 @@
+@media (min-width:1000px) {
+    @import 'jade/desktop';
+
+    .contact {
+        justify-content: center;
+        column-gap: 5vh;
+
+        aside {
+            width: 30%;
+        }
+
+        [type="submit"] {
+            width: 25%;
+        }
+    }
+}
