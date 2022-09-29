@@ -1,0 +1,181 @@
+*{
+    // border: 1px solid red;
+}
+
+    nav{
+        details{
+            display: none;
+        }
+
+        ul{
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        li{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        a{
+            height: 100%;
+            color: black;
+            padding-bottom: 2%;
+            text-transform: capitalize;
+            font-size: 20px;
+
+            &:hover{
+                color: rgb(56, 204, 155);
+            }
+        }
+    }
+
+    .about,
+    .history,
+    .type,
+    .place,
+    .opinion{
+        >article{
+            h4{
+                font-size:25px;
+                width: 70%;
+            }
+        }
+    }
+
+    article{
+        >h3{
+            font-size: 55px;
+        }
+    }
+
+    .about{
+        padding-bottom: 8%;
+
+        >article{
+            width: 60%;
+        }
+
+        >figure{
+            width: 50%;
+            column-gap: 1vh;
+        }
+
+        img:last-child{
+            display: flex;
+            width: 50%;
+        }
+
+        img:first-child{
+            width: 50%;
+            height: 100%;
+            padding-top: 0;
+        }
+    }
+
+    .history{
+        display: flex;
+        column-gap: 2vh;
+        padding-top: 3%;
+        padding-bottom: 8%;
+
+        >article{
+            width: 90%;
+        }
+        
+        >figure{
+            padding-left: 5%;
+        }
+
+        img{
+            padding-top: 40%;
+            height: 55%;
+        }
+    }
+
+    .type{
+        text-align: center;
+        padding-top: 8%;
+        align-items: center;
+        >article{
+            align-items: center;
+            width: 100%;
+        }
+
+        >section{
+            flex-direction: row;
+            column-gap: 2vh;
+            justify-content: space-between;
+
+            >figure{
+                width: 100%;
+            }
+
+            p{
+                height:25vh;
+                width: 90%;
+            }
+        }
+
+        img{
+            width:  18vh;
+            height: 18vh;
+        }
+    }
+
+    .place{
+        padding-top: 5%;
+        >article{
+            text-align: center;
+            align-items: center;
+        }
+
+        >section{
+            row-gap: 2vh;
+        }
+
+        .tokyo,
+        .osaka,
+        .yokohama{
+            height: 45vh;
+
+            p{
+                width: 50%;
+            }
+
+            >aside{
+                row-gap: 4vh;
+            }
+        }
+    }
+
+    .opinion{
+        text-align: center;
+        @include contentFlex;
+        align-items: center;
+        >article{
+            align-items: center;
+        }
+
+        >section{
+            flex-direction: row;
+            width: 90%;
+        }
+
+        figure{
+            width: 50%;
+
+            blockquote{
+                width: 90%;
+            }
+        }
+
+        img{
+            width: 20vh;
+            height: 20vh;
+        }
+    }
