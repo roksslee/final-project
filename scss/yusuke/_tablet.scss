@@ -2,7 +2,7 @@
     // border: 1px solid red;
 }
 
-@import 'mixins';
+@media (min-width:600px){
 
     nav{
         details{
@@ -181,3 +181,4 @@
             height: 20vh;
         }
     }
+}

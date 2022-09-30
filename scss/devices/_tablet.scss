@@ -1,6 +1,77 @@
+
 @media (min-width:600px){
-    @import 'home/tablet';
-    // @import 'jade/tablet';
-    // @import 'eden/tablet';
-    @import 'yusuke/tablet';
+
+    nav{
+        details{
+            display: none;
+        }
+
+        ul{
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        li{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        a{
+            height: 100%;
+            color: black;
+            padding-bottom: 2%;
+            text-transform: capitalize;
+            font-size: 20px;
+
+            &:hover{
+                color: rgb(56, 204, 155);
+            }
+        }
+    }
+
+    .profile{
+        figure{
+            width: 80%;
+        }
+    
+        h3{
+            font-size: 55px;
+        }
+    
+        p{
+            font-size: 24px;
+        }
+    
+        h4{
+            font-size: 35px;
+        }
+    
+        h5{
+            font-size: 30px;
+        }
+    
+        a{
+            font-size: 30px;
+        }
+    }
+    
+    .discovery{
+        h3{
+            font-size: 55px;
+        }
+    
+        p{
+            font-size: 24px;
+        }
+    
+        a{
+            width: 20%;
+        }
+    }
 }
+
+

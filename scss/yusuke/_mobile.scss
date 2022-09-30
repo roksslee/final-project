@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-@import 'mixins';
+@media (min-width:200px){
 
     header{
         >section{
@@ -534,3 +534,4 @@
             // border-radius: 50%;
         }
     }
+}    

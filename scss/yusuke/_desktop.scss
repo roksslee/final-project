@@ -2,6 +2,8 @@
     // border: 1px solid red;
 }
 
+@media (min-width:1000px){ 
+
     .about{
         >article{
             row-gap: 5vh;
@@ -80,3 +82,4 @@
             height: 20vh;
         }
     }
+}
