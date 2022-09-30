@@ -1,0 +1,66 @@
+@media (min-width: 1000px) {
+
+
+    * {
+        font-size: $desktopFont;
+    }
+
+
+    .about, .history, .type, .variation, .restaurants {
+        display: flex;
+    }
+
+    
+    header {
+
+
+        nav {
+            
+
+            @include edenColumn1;
+            align-items: center;
+            width: 100%;
+
+
+
+        }
+
+
+        figure {
+
+
+            background: $bgYellow;
+            width:fit-content;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 1%;
+
+
+            figcaption {
+                height: 4vh;
+            }
+        }
+
+        
+
+
+        article {
+
+            width: 100%;
+
+        }
+
+
+        .originalnav {
+
+
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+    }
+
+}
