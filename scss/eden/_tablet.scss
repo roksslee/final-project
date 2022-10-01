@@ -1,0 +1,22 @@
+@media (min-width:600px) {
+
+    p {
+        font-size: $tabletFont
+    }
+
+    .about {
+
+        aside {
+            @include edenColumnPerfect(center, 3vh);
+            width: 100%;
+        }
+
+        figure {
+            width: 90%;
+        }
+
+        ul {
+            width: 100%;
+        }
+    }
+}

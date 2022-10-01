@@ -1,0 +1,39 @@
+@media (min-width: 1000px) {
+
+
+    p {
+        font-size: $desktopFont;
+    }
+
+    .about {
+        
+        article {
+            flex-direction: row;
+        }
+
+        img {
+            width: 90%;
+        }
+
+        figure {
+            display: flex;
+            justify-content: center;
+        }
+
+        p {
+            padding: 3%;
+        }
+
+        aside {
+            @include edenColumn2;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul {
+            width: fit-content;
+        }
+
+
+    }
+}

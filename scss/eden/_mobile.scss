@@ -1,0 +1,52 @@
+@media (min-width: 200px) {
+
+    // All
+    p {
+        font-size: $mobileFont
+    }
+
+    .about {
+        background-color: $bgYellow;
+        @include edenColumnPerfect(center, 3vh);
+        width: 100%;
+
+
+        h2 {
+            padding-top: 5%;
+        }
+
+        article {
+            width: 100%;
+            @include edenColumnPerfect(center, 3vh);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        figure {
+            width: 90%;
+        }
+
+        aside {
+            width: 90%;
+            @include edenRow(3vh);
+            align-items: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        ul {
+            @include edenRow(1vh);
+        }
+
+        a {
+            color: $defaultBrown;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+    
+}
