@@ -10,7 +10,7 @@
             @include flexVertical;
 
             > article:first-child {
-                row-gap: 1vh;
+                @include flexVertical(1vh);
                 text-align: center;
             }
         }
@@ -29,6 +29,7 @@
 
     // menu section
     .menu {
+        padding: 10% 0;
         background-color: whitesmoke;
     
         > article {
@@ -162,7 +163,6 @@
         }
     }
 
-    
     // Bootstrap Scrollspy modify
     .navbar {
         border-radius: 0.375rem;
@@ -241,6 +241,11 @@
             text-align: unset;
         }
     }
+    
+    .gallery {
+        padding: 0;
+        padding-top: 10%;
+    }
 
     // Bootstrap Carousel modify
     #galleryCarousel.carousel {
@@ -282,6 +287,7 @@
         }
         
         li {
+            width: 100%;
             background-image: repeating-linear-gradient(to right, lightgray, lightgray 1px, whitesmoke 1px, whitesmoke 10%);
             @include flexHorisontal(unset);
 
@@ -306,7 +312,7 @@
 
             &:nth-child(2) {
                 span {
-                    width: 70%;
+                    width: 80%;
                 }
             }
 

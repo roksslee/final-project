@@ -3,6 +3,10 @@
 .jade {
     .menu {
         row-gap: 5vh;
+
+        article:last-child {
+            padding: 0 5%;
+        }
     
         figure {
             flex-direction: row;
@@ -44,12 +48,40 @@
         }
     }
     
-    .carousel {
+    #menuCarousel.carousel {
         height: 30vh;
     }
     
     .scrollspy-example {
         height: 40vh;
+    }
+
+    .recipe {
+        img {
+            width: 10vh;
+        }
+    }
+
+    #galleryCarousel.carousel {
+        .carousel-item {
+            > article {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+
+        figure {
+            width: 30%;
+            height: 30vh;
+        }
+    }
+
+    .info {
+        li {
+            p {
+                width: 10%;
+            }
+        }
     }
     
     .location {

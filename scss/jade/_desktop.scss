@@ -2,7 +2,7 @@
 
 .jade {
     > section {
-        padding: 10% 15% 0 15%;
+        padding: 5% 15%;
         row-gap: 5vh;
     
         > section {
@@ -16,6 +16,8 @@
     }
 
     .menu {
+        padding: 5% 15%;
+
         article {
             flex-direction: row;
             justify-content: center;
@@ -42,19 +44,27 @@
         }
     }
     
-    // for recipe sections
-    .xiaolongbao, .jiaozi, .huntun {
-        flex-direction: row;
-        justify-content: center;
-        column-gap: 3vh;
-    
+    .recipe {
+
         > section {
+            width: 80%;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 3vh;
+
+            > article {
+                width: 30%;
+            }
+        }
+    
+        aside {
             width: 65%;
         }
     }
     
     // Bootstrap contents modify
-    .carousel {
+    #menuCarousel.carousel {
+        width: 70%;
         height: 50vh;
     }
     
@@ -64,6 +74,35 @@
     
     .scrollspy-example {
         height: 45vh;
+    }
+
+    .gallery {
+        padding-top: 5%;
+    }
+
+    #galleryCarousel.carousel {
+        width: 70%;
+
+        .carousel-item {
+            > article {
+                justify-content: center;
+                column-gap: 3vh;
+            }
+        }
+        figure {
+            width: 25vh;
+        }
+    }
+
+    .info {
+        ul {
+            width: 60%;
+
+            li:first-child {
+                text-align: center;
+                font-weight: 500;
+            }
+        }
     }
     
     // location section
