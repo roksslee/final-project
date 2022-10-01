@@ -1,0 +1,116 @@
+@import 'mixins';
+
+.jade {
+    > section {
+        padding: 5% 15%;
+        row-gap: 5vh;
+    
+        > section {
+            @include flexVertical(0);
+        }
+    
+        > article:first-child {
+            flex-direction: column;
+            width: 50%;
+        }
+    }
+
+    .menu {
+        padding: 5% 15%;
+
+        article {
+            flex-direction: row;
+            justify-content: center;
+        }
+    
+        figure {
+            width: 30%;
+            flex-direction: column;
+            align-items: center;
+            column-gap: 3vh;
+    
+            figcaption {
+                align-items: center;
+            }
+    
+            aside {
+                text-align: center;
+                align-items: center;
+            }
+    
+            a {
+                width: 40%;
+            }
+        }
+    }
+    
+    .recipe {
+
+        > section {
+            width: 80%;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 3vh;
+
+            > article {
+                width: 30%;
+            }
+        }
+    
+        aside {
+            width: 65%;
+        }
+    }
+    
+    // Bootstrap contents modify
+    #menuCarousel.carousel {
+        width: 70%;
+        height: 50vh;
+    }
+    
+    .navbar {
+        width: 100%;
+    }
+    
+    .scrollspy-example {
+        height: 45vh;
+    }
+
+    .gallery {
+        padding-top: 5%;
+    }
+
+    #galleryCarousel.carousel {
+        width: 70%;
+
+        .carousel-item {
+            > article {
+                justify-content: center;
+                column-gap: 3vh;
+            }
+        }
+        figure {
+            width: 25vh;
+        }
+    }
+
+    .info {
+        ul {
+            width: 60%;
+
+            li:first-child {
+                text-align: center;
+                font-weight: 500;
+            }
+        }
+    }
+    
+    // location section
+    .location {
+        padding-bottom: 10%;
+    
+        a {
+            transition: .3s;
+        }
+    }
+}
