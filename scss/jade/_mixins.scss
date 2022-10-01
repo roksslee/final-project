@@ -15,9 +15,21 @@
     row-gap: $rowGap;
 }
 
-@mixin bgImg($url, $size:cover) {
+@mixin bgImg(
+    $url, $size:cover
+) {
     background-image: url($url);
     background-position: center;
     background-size: $size;
     background-repeat: no-repeat;
+}
+
+@mixin flexHorisontal(
+    $justify,
+    $align:center
+){
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: $align;
 }

@@ -1,11 +1,18 @@
-.ch-dumpling {
+@import 'mixins';
 
+.jade {
     main {
         background-color: whitesmoke;
 
         > section {
             padding: 10% 5%;
+            border-bottom: 5px dashed $defaultGreen;
             @include flexVertical;
+
+            > article:first-child {
+                row-gap: 1vh;
+                text-align: center;
+            }
         }
 
         h2 {
@@ -13,107 +20,103 @@
             font-size: 30px;
             text-transform: capitalize;
         }
+
+        p {
+            font-size: $mobileFont;
+        }
     }
+    // for all sections
+
+    // menu section
+    .menu {
+        background-color: whitesmoke;
     
-    section {
-        > article:first-child {
-            row-gap: 1vh;
-            text-align: center;
+        > article {
+            @include flexVertical(10vh);
         }
-    }
-}
-
-// menu section
-.menu {
-    background-color: whitesmoke;
-
-    article {
-        @include flexVertical(10vh);
-    }
-
-    figure {
-        @include flexVertical;
-
-        h4 {
-            color: $defaultGreen;
-            font-size: 20px;
+    
+        figure {
+            @include flexVertical;
+    
+            h4 {
+                color: $defaultGreen;
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: uppercase;
+                text-align: center;
+            }
+    
+            div {
+                width: 20vh;
+                height: 20vh;
+                padding: 5%;
+                border: 5px dashed $bgOrange;
+                border-radius: 15%;
+                outline: 5px solid white;
+                box-shadow: 1px 3px 10px -2px $defaultBrown;
+                transition: .3s;
+            }
+    
+            figcaption {
+                width: 80%;
+                @include flexVertical(1vh);
+                text-align: center;
+            }
+        }
+        
+        figure:first-child {
+            div {
+                @include bgImg('/img/xiaolongbao-icon.png', 15vh);
+            }
+        }
+    
+        figure:nth-child(2) {
+            div {
+                @include bgImg('/img/jiaozi-icon.png', 15vh);
+            }
+        }
+    
+        figure:last-child {
+            div {
+                @include bgImg('/img/wonton-icon.png', 15vh);
+            }
+        }
+    
+        a {
+            width: 60%;
+            padding: 3%;
+            border-radius: 30px;
+            color: whitesmoke;
             font-weight: 600;
-            text-transform: uppercase;
-            text-align: center;
+            text-decoration: none;
+            background-color: $defaultPink;
+            transition: .4s;
+    
+            &:hover {
+                color: gray;
+                box-shadow: inset 0px 1px 4px $defaultPink;
+                background-image: linear-gradient(to right, $bgYellow, $bgOrange);
+            }
         }
+    }
 
-        div {
-            width: 20vh;
-            height: 20vh;
-            padding: 5%;
-            border: 5px dashed $bgOrange;
-            border-radius: 15%;
-            outline: 5px solid white;
-            box-shadow: 1px 3px 10px -2px $defaultBrown;
+    // Bootstrap Carousel modify
+    #menuCarousel.carousel {
+        width: 100%;
+        height: 40vh;
+
+        .carousel-inner {
+            height: 100%;
+        }
+        
+        a {
+            height: 100%;
+            padding: 0;
+            border-radius: unset;
+            text-decoration: none;
             transition: .3s;
         }
 
-        figcaption {
-            width: 80%;
-            @include flexVertical(1vh);
-            text-align: center;
-        }
-    }
-    
-    figure:first-child {
-        div {
-            @include bgImg('/img/xiaolongbao-icon.png', 15vh);
-        }
-    }
-
-    figure:nth-child(2) {
-        div {
-            @include bgImg('/img/jiaozi-icon.png', 15vh);
-        }
-    }
-
-    figure:last-child {
-        div {
-            @include bgImg('/img/wonton-icon.png', 15vh);
-        }
-    }
-
-    a {
-        width: 60%;
-        padding: 3%;
-        border-radius: 30px;
-        color: whitesmoke;
-        font-weight: 600;
-        text-decoration: none;
-        background-color: $defaultPink;
-        transition: .4s;
-
-        &:hover {
-            color: gray;
-            box-shadow: inset 0px 1px 4px $defaultPink;
-            background-image: linear-gradient(to right, $bgYellow, $bgOrange);
-        }
-    }
-}
-
-// Bootstrap Carousel modify
-.carousel {
-    width: 100%;
-    height: 40vh;
-    position: relative;
-    overflow-y: hidden;
-    cursor: pointer;
-    
-    .carousel-inner {
-        height: 100%;
-    }
-    
-    a {
-        height: 100%;
-        border-radius: unset;
-        padding: 0;
-        transition: .3s;
-        
         h3 {
             width: 100%;
             height: 100%;
@@ -123,153 +126,279 @@
             @include flexAlign;
             transition: .3s;
         }
-    }
-    
-    img {
-        padding-bottom: 30%;
-        z-index: 0;
-    }
-    
-    &:hover {
-        
-        a {
+
+        a:hover {
+            h3 {
+                background-color: rgba(0,0,0,.5);
+                color: whitesmoke;
+            }
         }
         
-        h3 {
-            background-color: rgba(0,0,0,.5);
+        img {
+            padding-bottom: 30%;
+            z-index: 0;
+        }
+
+        .carousel-item {
+            height: 100%;
+        
+            &:first-child {
+                a {
+                    @include bgImg('/img/xiaolongbao.jpg');
+                }
+            }
+        
+            &:nth-child(2) {
+                a {
+                    @include bgImg('/img/jiaozi.jpg');
+                }
+            }
+        
+            &:last-child {
+                a {
+                    @include bgImg('/img/wonton.jpg');
+                }
+            }
+        }
+    }
+
+    
+    // Bootstrap Scrollspy modify
+    .navbar {
+        border-radius: 0.375rem;
+        justify-content: right;
+    
+        a {
+            text-transform: uppercase;
+        }
+    
+        .nav-link {
+            color: $defaultGreen;
+        }
+    
+        .nav-link.active {
             color: whitesmoke;
-        }
-    }
-}
-
-.carousel-item {
-    height: 100%;
-
-    &:first-child {
-        a {
-            @include bgImg('/img/xiaolongbao.jpg');
-        }
-    }
-
-    &:nth-child(2) {
-        a {
-            @include bgImg('/img/jiaozi.jpg');
-        }
-    }
-
-    &:last-child {
-        a {
-            @include bgImg('/img/wonton.jpg');
-        }
-    }
-}
-
-// Bootstrap Scrollspy modify
-.navbar {
-    border-radius: 0.375rem;
-    justify-content: right;
-
-    a {
-        text-transform: uppercase;
-    }
-
-    .nav-link {
-        color: $defaultGreen;
-    }
-
-    .nav-link.active {
-        color: whitesmoke;
-        background-color: $defaultGreen;
-    }
-
-    .dropdown-item:active, .dropdown-item.active {
-        background-color: $bgOrange;
-    }
-
-    .dropdown-menu[data-bs-popper] {
-        left: unset;
-        right: 0;
-    }
-
-}
-
-.scrollspy-example {
-    height: 60vh;
-    overflow-y: scroll;
-    color: dimgray;
-
-    %recipe {
-        color: $defaultGreen;
-        font-weight: 300;
-        text-transform: uppercase;
-        text-decoration: underline 1px dashed;
-    }
-
-    h4 {
-        @extend %recipe;
-    }
-}
-
-// recipe section
-.xiaolongbao, .jiaozi, .huntun {
-
-    img {
-        width: 15vh;
-        padding: 2%;
-        transition: .2s;
-
-        &:hover {
-            padding: 1.5% 2% 2.5% 2%;
-        }
-    }
-}
-
-.location {
-    > section {
-        width: 100%;
-        @include flexVertical(5vh);
-
-        article {
-            width: 100%;
-            @include flexVertical;
-        }
-
-    }
-
-    ul {
-        padding: 0;
-        border-radius: 1vh;
-        background-color: white;
-        @include flexVertical(0);
-        align-items: flex-start;
-        overflow: hidden;
-
-        li {
-            width: 100%;
-            @include flexAlign;
-        }
-    }
-
-    a {
-        width: 100%;
-        padding: 3%;
-        color: gray;
-        text-decoration: none;
-        text-transform: uppercase;
-
-        &:hover {
             background-color: $defaultGreen;
-            color: whitesmoke;
+        }
+    
+        .dropdown-item:active, .dropdown-item.active {
+            background-color: $bgOrange;
+        }
+    
+        .dropdown-menu[data-bs-popper] {
+            left: unset;
+            right: 0;
+        }
+    
+    }
+    
+    .scrollspy-example {
+        height: 60vh;
+        overflow-y: scroll;
+        color: dimgray;
+    
+        %recipe {
+            color: $defaultGreen;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-decoration: underline 1px dashed;
+        }
+    
+        h4 {
+            @extend %recipe;
+        }
+    }
+    
+    // recipe section
+    .recipe {
+        row-gap: 10vh;
+
+        > article:first-child {
+            row-gap: 1vh;
+            text-align: center;
+        }
+        
+        img {
+            width: 15vh;
+            padding: 2%;
+            transition: .2s;
+    
+            &:hover {
+                padding: 1.5% 2% 2.5% 2%;
+            }
+        }
+
+        > section {
+            @include flexAlign;
+
+            > article {
+                text-align: center;
+                @include flexVertical(0);
+            }
+        }
+    
+        aside {
+            text-align: unset;
         }
     }
 
-    iframe {
+    // Bootstrap Carousel modify
+    #galleryCarousel.carousel {
         width: 100%;
-        height: 25vh;
-        transition: .3s;
+        background-color: $bgOrange;
 
-        &:hover {
-            filter: brightness(80%);
+        .carousel-inner, .carousel-item {
+            width: 100%;
+            height: 100%;
+
+            > article {
+                padding: 5% 0;
+                @include flexVertical;
+            }
+        }
+
+        figure {
+            width: 80%;
+            height: 45vh;
+            border: 0;
+            box-shadow: 0px 2px 10px -5px $defaultBrown;
+            overflow:hidden;
+        }
+
+        img {
+            height: 60%;
+            object-fit: cover;
+        }
+    }
+
+    .info {
+
+        ul {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            @include flexVertical(0);
+            align-items: unset;
+        }
+        
+        li {
+            background-image: repeating-linear-gradient(to right, lightgray, lightgray 1px, whitesmoke 1px, whitesmoke 10%);
+            @include flexHorisontal(unset);
+
+            p {
+                width: 15%;
+                margin: 0;
+                text-align: center;
+            }
+
+            p:first-child {
+                width: 20%;
+                padding: 1% 0;
+                background-color: whitesmoke;
+            }
+
+            &:first-child {
+                background-image: none;
+                font-size: 16px;
+                font-weight: 400;
+                text-align: center;
+            }
+
+            &:nth-child(2) {
+                span {
+                    width: 70%;
+                }
+            }
+
+            span {
+                height: 2vh;
+                background-color: $defaultGreen;
+                @include flexHorisontal(space-between);
+            }
+        }
+        
+        
+        .fat {
+            span {
+                width: 4.6%;
+            }
+        }
+
+        .protain {
+            span {
+                width: 6.8%;
+            }
+        }
+
+        .sugar {
+            span {
+                width: 2.4%;
+            }
+        }
+
+        .fiber {
+            span {
+                width: 1%;
+            }
+        }
+
+        .carbs {
+            span {
+                width: 11%;
+            }
+        }
+
+    }
+    
+    .location {
+        border: 0;
+
+        > section {
+            width: 100%;
+            @include flexVertical(5vh);
+    
+            article {
+                width: 100%;
+                @include flexVertical;
+            }
+    
+        }
+    
+        ul {
+            padding: 0;
+            border-radius: 1vh;
+            background-color: white;
+            @include flexVertical(0);
+            align-items: flex-start;
+            overflow: hidden;
+    
+            li {
+                width: 100%;
+                @include flexAlign;
+            }
+        }
+    
+        a {
+            width: 100%;
+            padding: 3%;
+            color: gray;
+            text-decoration: none;
+            text-transform: uppercase;
+    
+            &:hover {
+                background-color: $defaultGreen;
+                color: whitesmoke;
+            }
+        }
+    
+        iframe {
+            width: 100%;
+            height: 25vh;
+            transition: .3s;
+    
+            &:hover {
+                filter: brightness(80%);
+            }
         }
     }
 }
