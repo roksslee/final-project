@@ -1,66 +1,83 @@
 @media (min-width: 1000px) {
 
 
+    // All
     * {
         font-size: $desktopFont;
     }
 
+    // About
+    .about {
+        
+        > aside {
+            flex-direction: row;
+            justify-content: space-evenly;
 
-    .about, .history, .type, .variation, .restaurants {
-        display: flex;
-    }
-
+            figure {
+                width: 40%;
+                
+            }
     
-    header {
-
-
-        nav {
-            
-
-            @include edenColumn1;
-            align-items: center;
-            width: 100%;
-
-
-
-        }
-
-
-        figure {
-
-
-            background: $bgYellow;
-            width:fit-content;
-            padding: 10px;
-            border-radius: 6px;
-            margin: 1%;
-
-
-            figcaption {
-                height: 4vh;
+            img {
+                width: 70%;
+            }
+    
+            p {
+                width: 50%;
+                text-align: left;
             }
         }
 
         
 
-
-        article {
-
-            width: 100%;
-
-        }
-
-
-        .originalnav {
-
-
-            width: 50%;
-            display: flex;
-            justify-content: space-between;
-
-
-        }
-
     }
 
+    .history {
+
+        aside {
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            p {
+                width: 100%;
+                text-align: right;
+            }
+        }
+
+        figure {
+            width: 100%;
+            
+        }
+
+        img {
+            width: 80%;
+        }
+
+        
+    }
+
+
+    // Type
+    .type {
+
+        > article {
+
+            flex-wrap: nowrap;
+
+        .card {
+            width: 20%;
+            height: 60vh;
+        }
+
+        }
+        
+    }
+
+
+    .variation {
+
+        img {
+            width: 50%;
+        }
+    }
 }

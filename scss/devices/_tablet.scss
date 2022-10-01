@@ -1,76 +1,103 @@
 @media (min-width:600px) {
 
+
+    // All
     p, a {
         font-size: $tabletFont
     }
-    nav {
+
+    header {
+
+        nav {
+            @include edenColumn1;
+            align-items: center;
+        }
 
         figure {
-
-
-            height: 5vh;
-            
-
-            figcaption {
-                height: 6vh;
-                display: flex;
-                align-items: center;
-                font-size: 20px;
-            }
-
-            #h1 {
-                font-size: 20px;
-            }
+            background-color: $bgYellow;
+            border-radius: 100px;
+            width: fit-content;
+            padding: 1%;
         }
 
-
-        details, summary {
-            display: none;
-        }
-
-        
-        > article {
-
+        article {
 
             @include edenColumn1;
+            width: 100%;
 
-
+            summary, details {
+                display: none;
+            }
+    
             .originalnav {
+                
+                width: 50%;
                 display: flex;
                 justify-content: space-between;
             }
 
-
             ul {
-                width: 50%;
                 list-style: none;
             }
 
-
             a {
-                color: $bgYellow;
                 text-decoration: none;
+                color: $bgYellow;
             }
 
         }
-
+   
     }
 
 
+    // About
     .about {
         img {
-            height: 70vh;
+            
+            width: 70%;
         }
     }
-    
-    .restaurant {
+
+
+
+    // Type
+    .type {
+
+        > article {
+
+            
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 4vh;
+
+            .card {
+                width: 40%;
+            }
+
+            #magic {
+                font-size: 15.8px;
+            }
+
+        }
+    }
+
+    // Restaurants
+    .restaurants {
         
-        display: flex;
+        section {
+            
+            @include edenJustify;
+            width: 100%;
+            column-gap: 4vh;
+            
+        }
 
         article {
-            width: 10%;
+            width: 40%;
         }
-            
+
     }
-    
+
 }

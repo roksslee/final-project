@@ -1,6 +1,8 @@
 @media (min-width:200px) {
 
-    * {
+
+    // All
+    p, a {
         font-size: $mobileFont;
     }
 
@@ -13,122 +15,9 @@
         border-radius: 6px;
     }
 
-    header{
-        background-image: url(/img/header.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 50vh;
-        width: 100%;
-    
-
-        figure {
-            @include edenJustify;
-        }
-
-        figure {
-            border: 0px transparent none;
-        }
-
-        #h1 {
-            padding-left: 3px;
-            font-size: 15px;
-        }
-
-        img {
-            width: 40px;
-        }
-
-        figcaption {
-            display: flex;
-            align-items: flex-end;
-            display: flex;
-            padding-left: 3px;
-        }
-
-        main {
-            position: relative;
-        }
-
-    }
-
-    nav {
-
-        justify-content: space-between;
-        position: relative;
-
-        h2 {
-            text-align: center;
-            color: $bgYellow;
-        }
-
-        details {
-            position: absolute;
-            width: 100%;
-            font-size: 20px;
-            height: 25vh;
-            display: flex;
-            align-items: flex-end;
-        }
-
-        summary {
-            width: 100%;
-            text-align: center;
-        }
-
-        details > ul {
-            background-color: $bgYellow;
-            width: 100%;
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            @include edenColumn1;
-            align-items: center;
-        }
-
-        details li {
-            display: flex;
-            width: 85%;
-        }
-
-        details a {
-            width: 100%;
-            text-decoration: none;
-            color: black;
-            font-weight: 600;
-            text-align: center;
-            padding: 2%;
-         }
-
-         .bottom {
-            border-bottom: 1px solid $defaultBrown;
-         }
-
-        summary {
-            @include edenJustify;
-            
-        }
-
-        .fa-bars {
-            color: $bgYellow;
-            font-size: 25px;
-        }
-
-        article {
-            height: 35vh;
-            @include edenJustifyAlign;
-        }
-    }
-
-    
-
-    .originalnav {
-        display: none;
-    }
-
     main {
         background-color: $bgYellow;
-        @include edenColumnPerfect(center, 3vh)
+        position: relative;
     }
 
     .about, .history, .type, .variation, .restaurants {
@@ -140,28 +29,149 @@
         padding: 5%;
     }
 
-    .about {
-        
-        @include edenColumn1;
-        width: 90%;
 
+    // Header
+    header{
+
+        background-image: url(/img/header.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        width: 100%;
+    
         figure {
-            @include edenColumn2;
+            @include edenJustify;
         }
 
         img {
+            width: 40px;
+        }
+
+        #h1 {
+            padding-left: 3px;
+            font-size: 15px;
+        }
+
+        figcaption {
+            display: flex;
+            align-items: flex-end;
+            display: flex;
+            padding-left: 3px;
+        }
+
+    }
+
+
+    // Nav
+    nav {
+
+        justify-content: space-between;
+        position: relative;
+
+        h2 {
+            text-align: center;
+            color: $bgYellow;
+        }
+
+        details {
+
+            position: absolute;
             width: 100%;
+            font-size: 20px;
+            height: 25vh;
+            display: flex;
+            align-items: flex-end;
+
+            ul {
+                @include edenColumn1;
+                background-color: $bgYellow;
+                align-items: center;
+                width: 100%;
+                position: absolute;
+            }
+
+            li {
+                display: flex;
+                width: 85%;
+            }
+    
+            a {
+                width: 100%;
+                text-decoration: none;
+                color: black;
+                font-weight: 600;
+                text-align: center;
+                padding: 2%;
+             }
+
+             a:hover {
+                color: $defaultGreen;
+             }
+
+        }
+
+        .bottom {
+            border-bottom: 1px solid $defaultBrown;
+        }
+
+        summary {
+            @include edenJustify;
+            width: 100%;
+            text-align: center;
+        }
+
+        .fa-bars {
+            color: $bgYellow;
+            font-size: 25px;
+        }
+
+        article {
+            height: 35vh;
+            @include edenJustifyAlign;
+        }
+
+        .originalnav {
+            display: none;
+        }
+
+    }
+
+    
+    // About
+    .about {
+        
+        @include edenColumn2;
+        width: 100%;
+
+        h3 {
+            text-align: center;
+            width: 80%;
+            padding-top: 5%;
+        }
+
+        figure {
+            @include edenColumn2;
+            height: fit-content;
+        }
+
+        img {
+            width: 90%;
         }
         
         p {
             text-align: center;
+            width: 90%;
         }
 
         > aside {
-            @include edenRow(1vh);
+            @include edenColumnPerfect(center, 1vh);
         }
+
     }
 
+
+    // History
     .history {
 
         background-color: $bgOrange;
@@ -170,11 +180,12 @@
 
         h3 {
             padding-top: 5%;
+            text-align: center;
         }
 
         aside {
 
-            @include edenColumnPerfect(center, 3vh);
+            @include edenColumnPerfect(center, 1vh);
 
 
             figure {
@@ -189,14 +200,17 @@
                 text-align: center;
                 width: 90%;
             }
+
         }
         
     }
 
+
+    // Type
     .type {
 
-        width: 90%;
-        @include edenColumn2;
+        width: 100%;
+        padding-top: 5%;
 
         article {
             @include edenColumnPerfect(center, 3vh);
@@ -212,17 +226,25 @@
 
         .readmore {
             padding: 10px 30px;
+            margin-bottom: 5%;
             background-color: $defaultBrown;
-            border-radius: 6px;
             color: $defaultPink;
+            border-radius: 6px;
         }
 
         .readmore:hover {
             color: $bgYellow;
             background-color: $defaultGreen;
         }
-    }
 
+        .card {
+            width: 90%;
+        }
+
+    }
+    
+
+    // Variation
     .variation {
 
         background-color: $bgOrange;
@@ -232,13 +254,13 @@
             padding-top: 4%;
         }
         
-        
         article {
             @include edenColumnPerfect(center, 1vh);
         }
 
         h4 {
             width: 90%;
+            text-align: center;
         }
 
         figure {
@@ -256,9 +278,15 @@
 
     }
 
+
+    // Restaurant
     .restaurants {
 
+        padding-top: 5%;
+        padding-bottom: 5%;
+
         article {
+
             @include edenColumnPerfect(center, 1vh);
 
             a {
@@ -269,13 +297,18 @@
             }
 
             iframe {
-                width: 100%;
+                width: 90%;
                 height: 40vh;
             }
+
         }
+
     }
 
+
+    // Footer
     footer {
+
         @include edenColumnPerfect(center, 3vh);
         background-color: $defaultBrown;
         color: $bgYellow;
@@ -283,7 +316,7 @@
         width: 100%;
 
         h3 {
-            margin-top: 4%;
+            padding-top: 5%;
         }
 
         aside {
@@ -292,7 +325,6 @@
 
         ul {
             list-style: none;
-            
         }
 
         a {
@@ -301,7 +333,7 @@
         }
 
         a:hover {
-            color: $defaultPink;
+            color: $defaultGreen;
         }
 
         .sns {
@@ -309,5 +341,8 @@
             justify-content: space-between;
             width: 70%;
         }
+
     }
+
+
 }
